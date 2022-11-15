@@ -188,12 +188,5 @@ async def on_message(message):
         quotechoice = random.randint(0, i)
         await message.channel.send(quotes[quotechoice])
 
-    #Special
-    #if (len(unPuncMessage) < 100):
-        #quotes = ["fuck", "shit", "damn", "crap", "cunt", "bitch", "ass"]
-        #i = len(quotes) - 1
-        #quotechoice = random.randint(0, i)
-        #await message.channel.send(quotes[quotechoice])
-
 #~~~ End of if statements ~~~
 client.run(botData["HQ"]["token"])
