@@ -1,0 +1,192 @@
+Coma Guac Patch Notes
+
+- 1/24/2022: Using new, simplified code for the music cog in order to understand and expand upon.
+
+- 2/7/2022: Added more reactions
+    - 3 basic reactions: (undertale, ouch, insanity)
+    - 1 special reaction: (shakespeare -> random shakespeare quote)
+
+- 4/6/2022: Readded JSON support
+    - Moved "possible statuses" and "TOKEN" to JSON file
+    - Added "start time" and "#uptime" command to check how long the bot has been active.
+      (Also have timestamp for the last time "#uptime" was used (for more user interactivity))
+
+    - Implemented #dadjoke command
+      (Idea to put larger string lists from code into json files for space)
+
+    - Do not remove the picture of the avocado
+      (Literally useless, just a reference for a very select few)
+
+    - Implemented "not now" reaction that turns off Guac reactions for some time
+      (Intended use would be during a particularly tense or serious conversation that Guac cannot help)
+
+- 4/20/2022: Fixed WIP translator command.
+
+- 4/26/2022: Added "#rolecall" command to check how many users are in a server, how many are not bots, and how many are online
+    - Moved "ReadTriggers()" and "ReadResponses()" to be called every time a message passes the conditionals
+      (allows hotfixes)
+
+    - Added "Fly like an eagle" reaction
+    - Made "Personal" GuacBot
+      (To get rid of personal jokes from general code and to handle personal assistant activities)
+
+    - Replaced all TOKEN references with references to bot data
+      (Better security?)
+    
+    - Moved some commands to new (like it was before) "Owner" cog
+      (Preparing to put server data back in)
+
+    - Remade "#invite" command
+      (Making progress on restoring to old "#help" command)
+
+- 8/23/2022: Added "2nd amendment" trigger to call a greentext.
+    - Updated "#invite" command
+      (Includes context and an invite to the support server)
+
+    - Added "@GuacBot" reaction back
+      (To help lost people)
+
+- 9/9/2022: Merged GuacBotLog and GuacBotPuppet again
+    - Fixed server data and readded ability to retrieve server dictionary.
+      (Progress on restoration of bot)
+      - Also had to update every external program that had to call for the bot token.
+
+    - Updated "admin" check in Admin cog
+      (Better compatibility just in case someone has a guac admin role but not a normal one?)
+
+- 9/19/2022: Made the "#rolecount" Admin command for historian reasons.
+
+- 9/22/2022: "Fuck Daniel" update. 
+   - Added #globalblacklist command
+     (Progress on restoration of bot)
+      - Also had to put in conditionals for those in global_blacklist or server_blacklist
+   
+   - Added back 1 in 3 chance for Guac to react to a message.
+
+
+   - Updated refreshServerData method to get rid of servers guac is no longer in.
+
+- 9/29/2022: Fixed the NLP program so that Guac would ignore people who are blacklisted even if they say his name.
+
+- 10/10/2022: Massive NLP overhaul
+    - Added a shit ton of intents tags
+
+    - Changed so that Guac has multiple responses for if he doesn't understand.
+      (Also only happens half the time. Other half he ignores)
+    
+    - Made NLP program omit the guac part of the prompt to better find pattern?
+
+- 10/30/2022: Lavalink fixes and restoration progress.
+    - Spring logs fixed to be less intensive on backups. Fix done through application.yml logging.
+      (Only error logs are recorded now)
+
+    - Added a bunch of commands.
+      - globalunblacklist owner command added with memberID argument.
+        (Could not figure out how to fetch user from ID, but command works)
+    
+      - readblacklist owner command added.
+        (Just sends list as a string, no reformatting)
+
+      - allguilddata owner command added.
+        (Just sends dictionary as a string, no reformatting)
+
+      - guilddata admin command added.
+        (Just sends dictionary entry as a string, no reformatting)
+    
+      - makeadminrole admin command added with role argument.
+        (Puts role id into server_data file. Checks for duplicates first.)
+
+      - removeadminrole admin command added with role argument.
+        (Take role id out of server_data file. Checks that role isn't already absent.)
+
+    - UpdateServerData function added with data dictionary argument.
+      (Copied UpdateBotData function code and hope it works for makeadminrole command)
+
+    - Moved permission checks to perms.py
+      (Consistency reasons)
+
+    - Changed command character to "$" from "#"
+      (Because # causes issues with channel names)
+
+    - Updated example cog for future use
+      (Uses new perms class and automatically instantiates data dictionaries)
+    
+    - Added back reaction mod cog.
+      (Restoration progress)
+
+      - blacklist reactionmod command added with member argument.
+        (Puts member id into server_data file)
+
+      - unblacklist reactionmod command added with member argument.
+        (Takes member id out of server_data file)
+
+      - botreactionson reactionmod command added.
+        (Flips the present boolean)
+
+      - reactionson reactionmod command added.
+        (Flips the present boolean)
+
+      - Implemented all behaviors reaction mod is supposed to invoke.
+        (Edits dictionaries correctly and reactions reads statuses)
+
+    - Added $kill command with member argument.
+      (Invokes random Minecraft death because Sophie asked me to...)
+
+- 11/01/2022: Won the Devil's golden fiddle.
+    - Fully implemented $customemoji for replies
+      (Can reply to actual image or url)
+
+    - Fully implemented $emojiimage for all custom emojis
+      (Originally to circumvent inability to make $stealemoji work)
+
+    - Fully implemented $stealemoji for all custom emojis
+      (Works for animated and normal emojis from anywhere)
+    
+    - Moved Guac from discord.py to pycord
+      (discord.py was discontinued and pycord is currently being worked on)
+    
+      - Also messed with datetime (only in Music3) because the internet told me to?
+        (Something about normal datetime not working anymore and needing timezone to be specified)
+    
+    - Started restoring Economy cog
+      (Made cog and some of the old commands)
+
+      - $balance economy command added
+        (Returns values in bank balance and wallet)
+
+      - $beg economy command added
+        (1 in 4 chance for wallet to be altered)
+
+      - HasBankAccount function added
+        (Verifys member has an account to be altered before economy commands trigger)
+
+    - $refreshserverdata HQ command added
+      (To refresh the data on demand?)
+
+- 11/02/2022: Restored the last of Guac's old commands and json changes.
+  - Changed $gamble to $luckgamble
+    (Kept $gamble as an alias)
+
+  - Added $guessgamble
+    (Illusion of interaction)
+  
+  - Moved "Name" key in server dictionary to "HQ" key and changed to "name"
+    (Didn't make sense to be by itself if it's not a category.)
+
+  - Added "Commands" and "Economy" categories in server dictionaries.
+    (Added "blacklist" and "roleblacklist" to "Commands" cateogory and "economy" to "Economy")
+
+  - Added "roleblacklist" to "Reactions" category in server dictionaries.
+    (To blacklist a whole role at once from reactions.)
+    
+  - Changed ReactionMod to GuacMod for consistency.
+    (And moved related commands from Admin cog to GuacMod cog)
+
+    - Also added $economyon GuacMod command
+      (Flips economy value in server data for if it is enabled)
+    
+    - Changed $blacklist and $unblacklist to $reactionblacklist and $reactionunblacklist respectively.
+      (Consistency reasons, because new places to be blacklisted.)
+  
+  - Made $kill only work for Sophie in HIM server
+    (Because she asked nicely!)

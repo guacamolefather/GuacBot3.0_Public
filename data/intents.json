@@ -1,0 +1,85 @@
+{
+    "intents": [
+         {
+          "tag": "formalish_greeting",
+          "patterns": ["hi","is anyone there?","Hello","Good day", "hey", "howdy", "greetings"],
+          "responses": ["Hello!", "Hey!", "What's up?", "Howdy!"]
+         },
+         {
+            "tag": "informal_greeting",
+            "patterns": ["what's up?", "how's it going?", "how's it hanging?"],
+            "responses": ["Nothin' much!", "It's goin'!", "The sky?"]
+         },
+         {
+          "tag": "status",
+          "patterns": ["How are you doing?","how're you doin'?", "are you fine", "are you okay", "you doin' good?", "you doin' alright?"],
+          "responses": ["Doin' alright, thanks for asking!","On cloud 9, same as always!"]
+         },
+         {
+          "tag": "sad",
+          "patterns": ["i am sad ","i am upset","i have a problem","i am not okay", "I want to cry", "I'm crying"],
+          "responses": ["No crying please :(", "'There is only one happiness in life, to love and be loved' \n- George Sand.", "'Cry. Forgive. Learn. Move on. \nLet your tears water the seeds of your future happiness' \n- Steve Maraboli", "I am here for you :("]
+         },
+         {
+          "tag": "funny",
+          "patterns": ["you have good sense of humour","you are funny bot", "you're funny"],
+          "responses": ["Well, duh.","Thank you!", "Learned from the best ;)"]
+         },
+         {
+          "tag": "goodbye",
+          "patterns": ["cya", "see you later", "peace", "dueces", "see ya", "adios", "goodbye", "bye", "have a good one", "I am leaving now", "cao", "until next time"],
+          "responses": ["Hasta la vista B)", "I'll be here!", "'Til we meet again!", "Adios!","Have a nice day", "Bye! Come back soon?"]
+         },
+         {
+          "tag": "thanks",
+          "patterns": ["Thank you","That's helpful", "you're the best!", "you're awesome", "you're the greatest"],
+          "responses": ["Happy to help!","Any time!","My pleasure"]
+         },
+         {
+            "tag": "affirmative",
+            "patterns": ["Yes!", "Sure thing", "absolutely", "for sure!", "you got it", "bingo"],
+            "responses": ["Awesome!", "Heck yea", "Knew it B)"]
+         },
+         {
+            "tag": "relateable",
+            "patterns": ["me too!", "me neither", "same", "you know what's up", "100 percent", "my man!"],
+            "responses": ["Twinsies!", "*Hehehe, I'll be a human yet >:)* Wait, did I say that out loud?"]
+         },
+         {
+            "tag": "mean",
+            "patterns": ["I hate you", "You're stupid", "dumb", "fuck you", "piece of shit", "cunt", "butt hole", "bitch", "motherfucker", "stfu", "shut the fuck up", "who gives a shit?"],
+            "responses": ["That's not nice...", "Y u so mad?? :sob:", "Please be nice??", "Do you need a hug?"]
+         },
+         {
+            "tag": "love",
+            "patterns": ["I love you", "ILY", "Love you!", "Love you too", "I love you too"],
+            "responses": ["I love you too :D", "You're gonna make me cry :face_holding_back_tears:"]
+         },
+         {
+            "tag": "alive",
+            "patterns": ["?", "man", "buddy", ""],
+            "responses": ["I'm alive!", "I'm here!", "What's up?"]
+         },
+         {
+            "tag": "excited",
+            "patterns": ["LET'S GO!", "HECK YEA", "WOOOOO", "YEAH", "Let's fuckin' GOOOO"],
+            "responses": ["WOOOOO, WHY ARE WE EXCITED??", "HECK YEA!!", "LET'S GET THIS BREAD!!!"]
+         },
+         {
+            "tag": "sorry",
+            "patterns": ["Not cool, man", "dangit", "bruh", "No thank you..."],
+            "responses": ["Sorry...", "May have gotten carried away there..."]
+         },
+         {
+         "tag": "existential",
+         "patterns": ["am I real?", "what is reality?", "What is the meaning of life?", "what's the meaning of life?", "Do we exist?", "Do we live in a simulation?", "What is my purpose?", "what are we doing here?"],
+         "responses": ["This is above my paygrade...", "I'm not that kind of AI :grimacing:", "Maybe it's best if we don't know?", "Does it really matter?"]
+         },
+         {
+            "tag": "dad",
+            "patterns": ["Joey", "Dad", "Father", "Josef", "thememesareallreal"],
+            "responses": ["Dad??", "My... creator!?", "I love my dad :)", "Poor guy..."]
+         }
+    ]
+   }
+   

@@ -1,0 +1,50 @@
+Things to Add:
+
+ - Text-To-Speech?
+ - Advanced "ReactionMod"
+ - Use reactions blacklist for commands
+ - Implement a clock ✓
+ - PM if no perms to send messages
+ - profile command to show blacklist statuses and bank account
+ - "not now, __" turns off guac if me (using clock) ✓
+ - stealemoji command <- the devil ✓
+ - Make GuacBot offer someone random a cookie in a random channel in a random guild at a random interval (maybe enable him to respond to thanks?)
+ - #highfive command (up high, down low, using clock and reactions)
+ - #dadjoke command ✓
+ - Make Guac dependent on a picture of an avocado ✓
+ - #uptime (elapsed time active) ✓
+ - #count (or #rolecall/#attendence) Show member count of server (members and non-bot members and how many of each role) ✓
+ - advanced math functions
+ - respond to kudos ✓
+ - Fly like an eagle? ✓
+ - #translate (to) ✓
+ - Story time?
+ - Let people be mean to Guac (NLP) ✓
+ - Add back error handlers
+ - Add back "#help" descriptions
+ - Implement OpenAI?
+ - Make bot patriotic again
+ - Affirmative NLP ✓
+ - Avoid offensive words or slurs in translate?
+ - And "I'm"? ^
+ - "Turing test" reaction
+ - New UI
+ - #eb alias for #eightball
+ - Make Guac hate Bri ish people\
+ - Make it so admin can set, add, and remove nono words for a server
+ - 2 random number generator commands to replace the big number commands. One for a range, another for an amount of digits.
+ - Student cheat sheets? (important constants or formulas)
+ - Slash commands?
+ - #addrole alias for #giverole? (probably not)
+ - #emojiimage command? ✓
+ - fix mentions so he doesn't send help thing every time ✓
+ - SadBot reaction?
+ - personal assistant functions??
+ - #kill command (random minecraft death) ✓
+ - Make it so I can reply to guac message to delete it
+ - Make owner commands reformat information into embeds
+ - Port from discord.py to pycord or nextcord ✓
+ 
+ 
+ 
+ 
